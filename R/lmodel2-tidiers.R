@@ -61,6 +61,7 @@ tidy.lmodel2 <- function(x, ...) {
 
   ret %>%
     inner_join(confints, by = c("method", "term")) %>% 
+    # change column order so `p.value` is at the end
     select(-p.value, dplyr::everything()) %>% 
     as_tibble()
 }
