@@ -38,7 +38,7 @@ TODO: sort out what happens to `glance.aov()`
 - `tidy_optim()` now returns the standard error provides the standard error if the Hessian is present. (#529 by @billdenney) (TODO: think about this)
 - `glance.biglm()` now returns a `df.residual` column
 - `tidy.htest()` column names are now run through `make.names()` to ensure syntactic correctness (#549 by @karissawhiting) (TODO: use tidyverse name repair?)
-- Add feature to return p-values in tidy.lmodel2 (#570)
+- `tidy.lmodel2()` now returns p-values (#570)
 
 
 ### Name changes for consistency
@@ -48,12 +48,14 @@ TODO: sort out what happens to `glance.aov()`
   - `.stdres` -> `.std.resid`
   - These changes only effect chi-squared tests
 - `tidy.ridgelm()` will now always return a `GCV` column and never returns an `xm` column (#532)
+- Many `glance()` methods now return the number of observations in a `nobs` column, which is typically the rightmost column.
 
 ### Bug fixes
 
 - Bug fix for `tidy.mlm()` when passed `quick = TRUE` (#539 by @MatthieuStigler)
 - Bug fix for `tidy.polr()` when passed `conf.int = TRUE` (#498)
 - Bug fix in `glance.lavaan()` (#577)
+- Bug fix to all `tidy.htest()` to supports equal variances (#608)
 
 ## Deprecations
 
