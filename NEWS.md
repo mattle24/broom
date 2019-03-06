@@ -38,6 +38,7 @@ TODO: sort out what happens to `glance.aov()`
 - `tidy_optim()` now returns the standard error provides the standard error if the Hessian is present. (#529 by @billdenney) (TODO: think about this)
 - `glance.biglm()` now returns a `df.residual` column
 - `tidy.htest()` column names are now run through `make.names()` to ensure syntactic correctness (#549 by @karissawhiting) (TODO: use tidyverse name repair?)
+- Add feature to return p-values in tidy.lmodel2 (#570)
 
 
 ### Name changes for consistency
