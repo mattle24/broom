@@ -18,6 +18,11 @@
 #'   (ordinary least squares), MA (major axis), SMA (standard major
 #'   axis), and RMA (ranged major axis).
 #'
+#'   The returned p-value is one-tailed and calculated via a permutation test.
+#'   A permutational test is used because distributional assumptions may not not
+#'   be valid. More information can be found in the vignette
+#'   (\code{\link{vignette("mod2user")}})
+#'
 #' @examples
 #' 
 #' library(lmodel2)
